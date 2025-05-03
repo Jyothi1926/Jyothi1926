@@ -1,0 +1,238 @@
+WEEK1:
+1.	Downloading and Installing Python and Modules
+a) Python 3 on Linux 
+Follow the instructions given in the URL https://docs.python
+guide.org/starting/install3/linux/
+Beginning Python installation
+For almost every Linux system, the following command could be used to install Python directly: 
+$ sudo apt-get install python3.8
+Getting Started
+We will start our installation by writing the password as mentioned in the below picture that gives the permission to perform further operations.
+ 
+      Assigning DiskSpace 
+      Generally, it asks for additional diskspace and we generally continue  by typing Y and then enter.
+ 
+Fetching and Installing Packages
+It’s a process in which required packages and modules are fetched and installed automatically. 
+It happens on it’s own when we give the permission to assign the diskspace.
+ 
+
+
+
+
+
+Getting through the installation process
+ 
+
+Finished Installation 
+Here, the required installation is completed.
+ 
+To verify the installation enter the following commands in your Terminal. 
+python3.8
+
+Run our First Python Program
+Let’s consider a simple Hello World Program
+# Python program to print 
+# Hello World 
+print("Hello World")
+
+OUTPUT:
+ 
+
+b)Python 3 on Windows
+Follow the instructions given in the URL 
+https://docs.python.org/3/using/windows.html(Please remember that Windows 
+installation of Python is harder!) 
+The installation requires downloading the official Python .exe installer and running it on your 
+system. The sections below will explain several options and details during the installation 
+process. 
+Step 1: Select Python Version 
+Deciding on a version depends on what you want to do in Python. The two major versions are 
+Python 2 and Python 3. Choosing one over the other might be better depending on your project 
+details. If there are no constraints, choose whichever one you prefer. 
+We recommend Python 3, as Python 2 reached its end of life in 2020. Download Python 2 only 
+if you work with legacy scripts and older projects. Also, choose a stable release over the newest 
+since the newest release may have bugs and issues. 
+Step 2: Download Python Executable Installer 
+Start by downloading the Python executable installer for Windows: 
+1. Open a web browser and navigate to the Downloads for Windows section of the official 
+Python website. 
+2.	Locate the desired Python version.
+ 
+
+3. Click the link to download the file. Choose either the Windows 32-bit or 64-bit installer. 
+The download is approximately 25MB.
+
+
+Step 3: Run Executable Installer 
+
+The steps below guide you through the installation process:
+1.	Run the downloaded Python Installer
+
+2.	The installation window shows two checkboxes:
+
+
+Admin privileges. The parameter controls whether to install Python for the current or all 
+system users. This option allows you to change the installation folder for Python. 
+Add Python to PATH. The second option places the executable in the PATH variable 
+after installation. You can also add Python to the PATH environment variable manually 
+later.
+
+
+ 
+For the most straightforward installation, we recommend ticking both checkboxes. 
+3. Select the Install Now option for the recommended installation (in that case, skip the next two 
+steps). 
+To adjust the default installation options, choose Customize installation instead and proceed to 
+the following step.
+ 
+The default installation installs Python 
+to C:\Users\[user]\AppData\Local\Programs\Python\Python[version] for the current user. It 
+includes IDLE (the default Python editor), the PIP package manager, and additional 
+documentation. The installer also creates necessary shortcuts and file associations.
+Customizing the installation allows changing these installation options and parameters. 
+4. Choose the optional installation features. Python works without these features, but adding 
+them improves the program's usability
+ 
+Click Next to proceed to the Advanced Options screen. 
+5. The second part of customizing the installation includes advanced options. 
+Choose whether to install Python for all users. The option changes the install location 
+to C:\Program Files\Python[version]. If selecting the location manually, a common choice 
+is C:\Python[version] because it avoids spaces in the path, and all users can access it. Due to 
+administrative rights, both paths may cause issues during package installation. 
+Other advanced options include creating shortcuts, file associations, and adding Python to 
+PATH.
+ 
+After picking the appropriate options, click Install to start the installation.
+6. Select whether to disable the path length limit. Choosing this option will allow Python to 
+bypass the 260-character MAX_PATH limit.
+ 
+The option will not affect any other system settings, and disabling it resolves potential name
+length issues. We recommend selecting the option and closing the setup. 
+Step 4: Add Python to Path (Optional) 
+If the Python installer does not include the Add Python to PATH checkbox or you have not 
+selected that option, continue in this step. Otherwise, skip to the next step. 
+Adding the Python path to the PATH variable alleviates the need to use the full path to access the 
+Python program in the command line. It instructs Windows to review all the folders added to the 
+PATH environment variable and to look for the python.exe program in those folders. 
+To add Python to PATH, do the following: 
+1. In the Start menu, search for Environment Variables and press Enter.
+ 
+2. Click Environment Variables to open the overview screen.
+ 
+3.	Double-click Path on the list to edit it.
+ 
+Alternatively, select the variable and click the Edit button.
+4. Double-click the first empty field and paste the Python installation folder path.
+ 
+Alternatively, click the New button instead and paste the path. 
+3. Click OK to save the changes. If the command prompt is open, restart it for the 
+following step.
+c)pip3 on Windows and Linux
+Install the Python package installer by following the instructions given in the 
+URLhttps://www.activestate.com/resources/quick-reads/how-to-install-and
+use-pip3/
+
+Check if pip is already installed by running the following on the command line:
+Pip  - -version
+
+Or 
+
+Pip  -v
+If pip is installed, you’ll see something similar to the following output:
+ 
+You should see something like the following if Python is installed:
+ 
+If you do not have a version of Python installed, you can quickly download and install a recent 
+version of ActivePython. 
+Adding PIP to Windows Environment Variables 
+One of the most common problems with running Python tools like pip is the “not on PATH” 
+error. This means that Python cannot find the tool you’re trying to run in your current directory. 
+In most cases, you’ll need to navigate to the directory in which the tool is installed before you 
+can run the command to launch it. 
+If you’d rather run pip (or other tools) from any location, you’ll need to add the directory in 
+which it’s installed as a PATH environment variable by doing the following: 
+1. Open up the Control Panel and navigate to System and Security > System 
+2. Click on the Advanced system settings link on the left panel
+3. Click Environment Variables. 
+4. Under System Variables, double-click the variable PATH. 
+5. Click New, and add the directory where pip is installed, e.g. C:Python33Scripts, and 
+select OK.
+
+ 
+Upgrading Pip on Windows 
+Pip is a key tool in the Python ecosystem, and as such is updated on a regular basis. Changes can 
+always be found in the release notes for each version. In order to keep your version of pip up to 
+date, you can run the following on the command line:
+
+python3 -m pip uninstall pip
+
+This command will uninstall the outdated version of pip first, and then download the most 
+current iteration. 
+It’s also possible to downgrade to a previous version of pip, in case a newer version is causing 
+unexpected compatibility errors. For example, to downgrade to pip v18.0 run the following 
+command:
+
+sudo apt install python3-pip    
+
+d)Installing numpy and scipy
+
+You can install any python3 package using the command pip3 install <packagename> 
+Steps for Installing NumPy 
+1. Download and Install Python. 
+Python should be installed before installing NumPy. 
+Download Python from Python's official website according to the operating system. After 
+installing Python, Numpy is installed using different commands in different operating 
+systems. 
+Let's see how NumPy is installed on different operating systems. 
+Installing Numpy 
+1. Installing NumPy on Mac Operating System 
+     1. Check if pip3 and python3 are installed correctly by running the following command:
+                  Pythom3 –version
+                  Pip3 –version
+      2. Install numpy by using the pip command:
+                     Pip3 install numpy
+      3. Verify installation by typing the following command:
+                    Import mumpy
+
+2. Installing NumPy on Windows Operating System
+Steps for installing NumPy on Windows: 
+1. Install NumPy using the following PIP command in the command prompt terminal:
+                   Pip install numpy
+
+e)Installing jupyterlab 
+Install from pip using the command pip install jupyterlab
+JupyterLab 
+Install JupyterLab with pip:
+     Pip install jupiterlab
+Note: If you install JupyterLab with conda or mamba, we recommend using the conda-forge 
+channel.
+
+Once installed, launch JupyterLab with:
+
+Jupiterlab
+
+     
+WEEK2:
+2.Introduction to Python3
+a)Printing your biodata on the screen
+
+Program:
+
+# Define a function 'personal_details'.
+def personal_details():
+ # Define variables 'name' and 'age' and assign values to them.
+ name, age = "Shreshta", 19
+ # Define a variable 'address' and assign a value to it.
+ address = "Hyderabad, Telangana, India"
+ # Print the personal details using string formatting.
+ print("Name: {}\nAge: {}\nAddress: {}".format(name, age, address))
+# Call the 'personal_details' function to display the details.
+personal_details()
+
+Output:
+
+Name: Shreshta
+Age: 19
+Address: Hyderabad, Telangana, Indiass
+
